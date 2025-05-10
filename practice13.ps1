@@ -1,3 +1,5 @@
+# Teeme funktsioonid
+
 function endScreen {
     Write-Host "Please select the next option" -ForegroundColor Green
     
