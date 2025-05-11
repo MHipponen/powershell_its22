@@ -21,8 +21,6 @@ if (Get-ADUser -Filter {SamAccountName -eq $username} -ErrorAction SilentlyConti
     Write-Host "Kasutaja '$username' on juba Active Directorys olemas." -ForegroundColor Red
 
 } else {
-    New-LocalUser -Name $username -FullName $fullName -Password $password
-
     try {
         New-ADUser -SamAccountName $username -GivenName $eesnimi -Surname $perenimi -Name "$eesnimi $perenimi"
         
